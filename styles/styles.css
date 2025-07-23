@@ -24,8 +24,8 @@ aside img {
     height: auto;
 }
 footer {
-    margin: 15px;
-    border: 1px solid #000;
+    margin-top: 15px;
+    border-top: 1px solid #000;
     text-align: center;
 }
 h1 {
@@ -34,15 +34,7 @@ h1 {
 img {
     width: 150px;
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
 }
 p {
     padding: 0px;
-}
-aside {
-    float: right;
-    width: 100px;
-    height: auto;
 }
