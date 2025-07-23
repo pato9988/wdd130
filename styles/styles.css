@@ -41,3 +41,8 @@ img {
 p {
     padding: 0px;
 }
+aside {
+    float: right;
+    width: 100px;
+    height: auto;
+}
