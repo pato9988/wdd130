@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+:root {
+    --primary-color:   #22959cff;;
+    --secondary-color: #2e1235ff;
+    --accent1-color:  #66289aff;
+    --accent2-color: #ad3d55ff;
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Noto-sans", sans-serif;
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+    color: var(--secondary-color);
+}
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+.socialmedia a {
+    text-decoration: none;
+}
+.hero{
+    position: relative;
+}
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent2-color);
+    color: aqua;
+}
+.hero article img {
+    float: right;
+    width: 125px;
+}
