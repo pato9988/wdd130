@@ -1,59 +1,180 @@
-@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
-:root {
-    --primary-color:   #22959cff;;
-    --secondary-color: #2e1235ff;
-    --accent1-color:  #66289aff;
-    --accent2-color: #ad3d55ff;
-    --heading-font: "Roboto", sans-serif;
-    --body-font: "Noto-sans", sans-serif;
-}
-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
+/* ===== Reset & Base ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: var(--body-font);
-    color: var(--secondary-color);
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    color: #222;
 }
-header, main, footer {
-    width: 840px;
-    margin: 0 auto;
+
+/* ===== Header ===== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: #c7b8f5;
+    padding: 1rem 2rem;
+    width: auto;
+    margin: 0.5rem;
 }
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--secondary-color);
+
+header img {
+    max-width: 80px;
 }
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+
+/* Nav inside header */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
-.socialmedia a {
+
+header nav a {
     text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition:  0.3s;
 }
-.hero{
-    position: relative;
+
+header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+
+/* ===== Hero Section ===== */
+.hero {
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent2-color);
-    color: aqua;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: 0;
+    width: 650px ;
+  
+  }
+  .hero h1 {
+    height: auto;
+    grid-area: 1/1;
+    position: absolute;
+    opacity: 0.6;
+    background-color: #c7b8f5;
+    top: 150px;
+    width: 645px;
+    
+  }
+
+.hero_img {
+    width: 645px;
+    height: auto;
+    grid-area: 1/1;
 }
-.hero article img {
-    float: right;
-    width: 125px;
+
+.hero_article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    grid-area: 1/1;
+    float: bottom;
+    position: absolute;
+    bottom:171px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 645px;
+  }
+  
+.hero_article img {
+    max-width: 150px;
+    border-radius: 5px;
 }
+.hero_article p {
+  color: #fff;
+  font-weight: light;
+}
+
+/* ===== History Section ===== */
+section:nth-of-type(1) {
+    padding: 1rem;
+    background-color: rgb(189, 198, 226);
+    margin: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+section:nth-of-type(1) h2 {
+    grid-column: 1 / -1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+section:nth-of-type(1) img {
+    max-width: 150px;
+    border-radius: 5px;
+}
+/* adventure section */
+.adventure_section {
+  padding: 1rem;
+  margin: 0.5rem;
+  display: grid;
+  grid-template-rows: 1fr auto ;
+  align-items: center;
+  text-align: center;
+  background-color: #c7b8f5;
+  margin-top: 0.5rem;
+
+}
+.adventure_h2 {
+  grid-area: 1/ -1;
+  align-items: center;
+  background-color: #c7b8f5;
+  width: auto;
+  top: center;
+}
+.adventure_img {
+  display: flex;
+  align-items: center;
+  width: auto;
+  
+}
+.adventure_img img{
+  width: 125px;
+  height: 100px;
+
+
+}
+
+
+/* ===== Footer ===== */
+footer {
+    background-color: #c7b8f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin:0.5rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .socialmedia {
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer .socialmedia img {
+    width: 30px;
+    height: 30px;
+}
+
+
